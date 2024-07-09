@@ -1,0 +1,15 @@
+class fulldiamond{
+    public static void main(String[] args){
+        int n = 5;
+        for(int i = 1;i <= n;i++){
+            String spaces = (" ").repeat(n-i);
+            String row=spaces+"* ".repeat(i);
+            System.out.println(row);
+        }
+        for(int j = (n-1);j>=1;j--){
+            String sp = (" ").repeat(n-j);
+            String r = sp+"* ".repeat(j);
+            System.out.println(r);
+        }
+    }
+}
