@@ -1,0 +1,41 @@
+a) Accessing an array element outside its bound  
+public class ArrayIndexOutOfBoundsExample1 {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30};
+        System.out.println(arr[0]); 
+        System.out.println(arr[2]); 
+        System.out.println(arr[3]); 
+    }
+}
+
+b) Iterating beyond the array length 
+public class ArrayIndexOutOfBoundsExample2 {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30};
+        for (int i = 0; i <= arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+c) Nested array and incorrect index 
+public class ArrayIndexOutOfBoundsExample3 {
+    public static void main(String[] args) {
+        int[][] arr = {{10, 20}, {30, 40}};
+        System.out.println(arr[0][0]); 
+        System.out.println(arr[1][1]); 
+        System.out.println(arr[0][2]); 
+    }
+}
+
+d) Passing incorrect array to the method  
+public class ArrayIndexOutOfBoundsExample4 {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30};
+        printElement(arr, 2);
+        printElement(arr, 3);
+    }
+    public static void printElement(int[] arr, int index) {
+        System.out.println(arr[index]);
+    }
+}
